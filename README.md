@@ -14,6 +14,8 @@ gde su TP, FP i FN, respektivno, broj istinito pozitivnih, lazno pozitivnih i la
 
 F1 rezultat je poželjniji od jednostavne tačnosti u ovom zadatku jer je skup podataka veoma neuravnotežen, pri čemu su TDE znatno ređi od drugih klasa. Ova metrika pruža uravnoteženu meru učinka, nagrađujući modele koji postižu dobar kompromis između recall-a (detektovanja što je moguće više tačnih TDE) i precision-a (izbegavanja prekomernih lažno pozitivnih rezultata).
 
+Dobijeni rezultat: Uspešnost klasifikatora procenjena je pomoću petostruke stratifikovane unakrsne validacije. Dobijen je prosečan F1 skor od približno 0.395, uz standardnu devijaciju od približno 0.056. Rezultati pokazuju da je moguće razlikovati TDE od ostalih klasa koristeći samo informacije izvedene iz fotometrijskih posmatranja, ali i da klasifikacija predstavlja težak problem, između ostalog zbog izrazite neuravnoteženosti skupa podataka, u kojem TDE objekti čine mali deo ukupnog broja objekata.
+
 
 ## Struktura repozitorijuma
 ```
