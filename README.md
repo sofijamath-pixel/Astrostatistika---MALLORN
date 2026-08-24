@@ -8,7 +8,7 @@ U ovom radu pravimo model masinskog ucenja koji fotometrijski identifikuje Tidal
 
 Kvalitet modela ocenjuje se $F_1$ skorom. On je definisan kao
 
-#### $F_1 = \frac{2 \; Precision  \; * \; Recall}{Precision \; + \; Recall}$, $\quad$ $Precision = \frac{TP}{TP + FP}$, $\quad$  $Recall = \frac{TP}{TP + FN}$
+#### $F_1 = \frac{2 \ Precision  \ * \ Recall}{Precision \ + \ Recall}$, $\quad$ $Precision = \frac{TP}{TP + FP}$, $\quad$  $Recall = \frac{TP}{TP + FN}$
 
 gde su TP, FP i FN, respektivno, broj istinito pozitivnih, lazno pozitivnih i lazno negativnih.
 
