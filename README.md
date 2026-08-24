@@ -4,7 +4,7 @@
 
 ## Opis projekta
 
-U ovom radu pravimo model masinskog ucenja koji fotometrijski identifikuje Tidal Distruption Events (TDE) trenirajuci nad simuliranim MALLORN (Many Artificial LSST Lightcurves based on Observations of Real Nuclear transients) podacima, nastalih na osnovu pravih https://www.ztf.caltech.edu/ posmatarnja. 
+U ovom radu pravimo model masinskog ucenja koji fotometrijski identifikuje Tidal Distruption Events (TDE) trenirajuci nad simuliranim MALLORN (Many Artificial LSST Lightcurves based on Observations of Real Nuclear transients) podacima, nastalih na osnovu pravih [Zwicky Transient Facility (ZTF)](https://www.ztf.caltech.edu/) posmatarnja. 
 
 Kvalitet modela ocenjuje se $F_1$ skorom. On je definisan kao
 
