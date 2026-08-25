@@ -35,19 +35,20 @@ Dobijeni rezultat: Uspešnost klasifikatora procenjena je pomoću petostruke str
 Notebook je u potpunosti automatizovan. Prilikom pokretanja nisu potrebne nikakve ručne intervencije, unošenje putanja niti preuzimanje dodatnih paketa unutar samih ćelija.
 
 ### Korak 1: Kloniranje repozitorijuma
-Otvorite Vaš terminal i klonirajte projekat sledećom komandom:  
+-Otvorite Vaš terminal i klonirajte projekat sledećom komandom:  
 git clone https://github.com/sofijamath-pixel/Astrostatistika---MALLORN  
 cd Astrostatistika---MALLORN
 
 ### Korak 2: Instalacija potrebnih paketa
-Instalirajte sve zavisnosti navedene u konfiguracionom fajlu unutar Vašeg radnog okruženja komandom:  
+-Instalirajte sve zavisnosti navedene u konfiguracionom fajlu unutar Vašeg radnog okruženja komandom:  
 pip install -r requirements.txt
 
 ### Korak 3: Pokretanje Jupyter Notebook-a
-Notebook otvorite komandom:  
+-Notebook otvorite komandom:  
 jupyter notebook Notebook.ipynb  
-Unutar notebooka izvršite komandu:  
-Kernel → Restart & Run All
+-Unutar notebooka izvršite komandu:  
+Kernel → Restart & Run All  
+-Sacekajte ~20 sekundi da se izvrše sve ćelije
 
 ## Podaci
 
