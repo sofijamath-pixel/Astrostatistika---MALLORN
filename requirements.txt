@@ -3,3 +3,7 @@ pandas
 matplotlib
 extinction
 scikit-learn
+pytest
+pylint
+nbmake
+nbqa
