@@ -4,13 +4,13 @@
 
 ## Opis projekta
 
-U ovom radu pravimo model masinskog ucenja koji fotometrijski identifikuje Tidal Distruption Events (TDE) trenirajuci nad simuliranim MALLORN (Many Artificial LSST Lightcurves based on Observations of Real Nuclear transients) podacima, nastalih na osnovu pravih [Zwicky Transient Facility (ZTF)](https://www.ztf.caltech.edu/) posmatarnja. 
+U ovom radu pravimo model masinskog učenja koji fotometrijski identifikuje Tidal Distruption Events (TDE) trenirajuci nad simuliranim MALLORN (Many Artificial LSST Lightcurves based on Observations of Real Nuclear transients) podacima, nastalih na osnovu pravih [Zwicky Transient Facility (ZTF)](https://www.ztf.caltech.edu/) posmatarnja. 
 
 Kvalitet modela ocenjuje se $F_1$ skorom. On je definisan kao
 
 #### $F_1 = \frac{2 \ Precision  \ * \ Recall}{Precision \ + \ Recall}$, $\quad$ $Precision = \frac{TP}{TP + FP}$, $\quad$  $Recall = \frac{TP}{TP + FN}$
 
-gde su TP, FP i FN, respektivno, broj istinito pozitivnih, lazno pozitivnih i lazno negativnih.
+gde su TP, FP i FN, respektivno, broj istinito pozitivnih, lažno pozitivnih i lažno negativnih.
 
 F1 rezultat je poželjniji od jednostavne tačnosti u ovom zadatku jer je skup podataka veoma neuravnotežen, pri čemu su TDE znatno ređi od drugih klasa. Ova metrika pruža uravnoteženu meru učinka, nagrađujući modele koji postižu dobar kompromis između recall-a (detektovanja što je moguće više tačnih TDE) i precision-a (izbegavanja prekomernih lažno pozitivnih rezultata).
 
@@ -19,21 +19,25 @@ Dobijeni rezultat: Uspešnost klasifikatora procenjena je pomoću petostruke str
 
 ## Struktura repozitorijuma
 ```
-├── projekat_notebook.ipynb   # Glavni Jupyter notebook — pokreće se od početka do kraja
+├── Notebook.ipynb            # Glavni Jupyter notebook — pokreće se od početka do kraja
 ├── requirements.txt          # Spisak potrebnih Python paketa za pokretanje koda
-├── .gitignore                # Fajl koji definiše šta Git ignoriše (sirovi TNG podaci, venv)
-├── README.md                 # Dokumentacija projekta (ovaj fajl)
+├── .gitignore                # Fajl koji definiše šta Git ignoriše 
+├── README.md                 # Opis i dokumentacija projekta (ovaj fajl)
 └── data/
-    └── mw_analogs.csv        # Pre-procesirani uzorak podataka (1703 MW analoga izvučenih iz TNG100-1)
+    └── split_[1-20]/                       # train i test lightcurve fajlovi - pojedinačna fotometrijska merenja objekata
+        └── test_full_lightcurves.csv
+        └── train_full_lightcurves.csv
+    └── test_log.csv                        
+    └── train_log.csv                      # sadrži po jedan red za svaki objekat: dodatne informacije o njemu i target value 0 ili 1
 ```
 ## Uputstvo za pokretanje
 
 Notebook je u potpunosti automatizovan. Prilikom pokretanja nisu potrebne nikakve ručne intervencije, unošenje putanja niti preuzimanje dodatnih paketa unutar samih ćelija.
 
 ### Korak 1: Kloniranje repozitorijuma
-Otvorite Vaš terminal i klonirajte projekat sledećom komandom:
-git clone https://github.com/arekysa/Galakticka-nastanjivost-i-procena-broja-terestrijalnih-planeta-u-analozima-Mlecnog-puta.git
-cd Galakticka-nastanjivost-i-procena-broja-terestrijalnih-planeta-u-analozima-Mlecnog-puta
+Otvorite Vaš terminal i klonirajte projekat sledećom komandom: 
+git clone https://github.com/sofijamath-pixel/Astrostatistika---MALLORN
+cd Astrostatistika---MALLORN
 
 ### Korak 2: Instalacija potrebnih paketa
 Instalirajte sve zavisnosti navedene u konfiguracionom fajlu unutar Vašeg radnog okruženja:
