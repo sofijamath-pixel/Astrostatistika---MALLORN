@@ -86,11 +86,6 @@ Kompletan skup sadrži približno **479.000 pojedinačnih fotometrijskih merenja
 
 Pre primene modela izvršeno je pretprocesiranje podataka koje uključuje uklanjanje merenja bez vrednosti fluksa, korekciju za galaktičku ekstinkciju i izdvajanje statističkih i vremenskih karakteristika svetlosnih krivih u svakom od šest fotometrijskih filtera.
 
-
-## Opciono: Preuzimanje sirovih podataka
-
-
-
 ## Zavisnosti i automatsko testiranje
 
 Projekat se oslanja na standardne naučne biblioteke za analizu podataka (numpy, pandas, scipy) i vizuelizaciju (matplotlib). 
