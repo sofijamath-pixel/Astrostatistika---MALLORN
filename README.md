@@ -45,8 +45,8 @@ pip install -r requirements.txt
 
 ### Korak 3: Pokretanje Jupyter Notebook-a
 Notebook otvorite komandom:  
-jupyter notebook Notebook.ipynb
-Unutar notebooka izvršite komandu:
+jupyter notebook Notebook.ipynb  
+Unutar notebooka izvršite komandu:  
 Kernel → Restart & Run All
 
 ## Podaci
