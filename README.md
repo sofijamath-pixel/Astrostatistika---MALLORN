@@ -35,8 +35,8 @@ Dobijeni rezultat: Uspešnost klasifikatora procenjena je pomoću petostruke str
 Notebook je u potpunosti automatizovan. Prilikom pokretanja nisu potrebne nikakve ručne intervencije, unošenje putanja niti preuzimanje dodatnih paketa unutar samih ćelija.
 
 ### Korak 1: Kloniranje repozitorijuma
-Otvorite Vaš terminal i klonirajte projekat sledećom komandom: 
-git clone https://github.com/sofijamath-pixel/Astrostatistika---MALLORN
+Otvorite Vaš terminal i klonirajte projekat sledećom komandom:  
+git clone https://github.com/sofijamath-pixel/Astrostatistika---MALLORN  
 cd Astrostatistika---MALLORN
 
 ### Korak 2: Instalacija potrebnih paketa
