@@ -1,10 +1,5 @@
-os
-kagglehub
-numpy 
-pandas 
-matplotlib.pyplot
-extinction 
-sklearn.model_selection
-sklearn.impute
-sklearn.ensemble
-sklearn.metrics
+numpy
+pandas
+matplotlib
+extinction
+scikit-learn
