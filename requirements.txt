@@ -1,3 +1,5 @@
+os
+kagglehub
 numpy 
 pandas 
 matplotlib.pyplot
