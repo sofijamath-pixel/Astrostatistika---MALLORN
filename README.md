@@ -44,7 +44,9 @@ Instalirajte sve zavisnosti navedene u konfiguracionom fajlu unutar Vašeg radno
 pip install -r requirements.txt
 
 ### Korak 3: Pokretanje Jupyter Notebook-a
-Pokrenite Jupyter okruženje, otvorite fajl Notebook.ipynb i izvršite komandu:
+Notebook otvorite komandom:  
+jupyter notebook Notebook.ipynb
+Unutar notebooka izvršite komandu:
 Kernel → Restart & Run All
 
 ## Podaci
