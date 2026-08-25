@@ -88,7 +88,7 @@ Pre primene modela izvršeno je pretprocesiranje podataka koje uključuje uklanj
 
 ## Zavisnosti i automatsko testiranje
 
-Projekat se oslanja na standardne naučne biblioteke za analizu podataka (numpy, pandas, scipy) i vizuelizaciju (matplotlib). 
+Projekat se oslanja na standardne naučne biblioteke za analizu podataka (numpy, pandas, scikit-learn) i vizuelizaciju (matplotlib). 
 
 U skladu sa praksama kursa, provera izvršavanja i validacija stila koda na repozitorijumu vrši se pokretanjem sledećih komandi:
 
