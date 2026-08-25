@@ -49,8 +49,6 @@ Kernel → Restart & Run All
 
 ## Podaci
 
-## Podaci
-
 Podaci korišćeni u ovom projektu potiču iz javno dostupnog skupa podataka [MALLORN Astronomical Classification Challenge](https://www.kaggle.com/competitions/mallorn-astronomical-classification-challenge), namenjenog fotometrijskoj klasifikaciji astronomskih tranzijenata. Skup sadrži simulirana fotometrijska posmatranja u šest LSST filtera (*u, g, r, i, z, y*), zajedno sa informacijama o tipu posmatranog objekta.
 
 U analizi su korišćena ukupno **3.043 astronomska objekta**, od kojih je **148 klasifikovano kao TDE**, dok preostalih **2.895 objekata** pripada drugim klasama tranzijenata i promenljivih izvora. Cilj projekta je binarna klasifikacija objekata na **TDE** (`target = 1`) i **non-TDE** (`target = 0`).
