@@ -98,7 +98,9 @@ Projekat se oslanja na standardne naučne biblioteke za analizu podataka (numpy,
 U skladu sa praksama kursa, provera izvršavanja i validacija stila koda na repozitorijumu vrši se pokretanjem sledećih komandi:
 
 # Provera izvršavanja kompletnog notebook-a od prve do poslednje ćelije
-pytest --nbmake --nbmake-timeout=60 projekat_notebook.ipynb
+pytest --nbmake --nbmake-timeout=60 projekat_notebook.ipynb  
+ili alternativno:  
+python3 -m pytest --nbmake --nbmake-timeout=60 Notebook.ipynb
 
 # Statička analiza i provera stila koda unutar ćelija notebook-a
-nbqa pylint projekat_notebook.ipynb
+nbqa pylint Notebook.ipynb
