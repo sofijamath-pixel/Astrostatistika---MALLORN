@@ -40,29 +40,54 @@ git clone https://github.com/sofijamath-pixel/Astrostatistika---MALLORN
 cd Astrostatistika---MALLORN
 
 ### Korak 2: Instalacija potrebnih paketa
-Instalirajte sve zavisnosti navedene u konfiguracionom fajlu unutar Vašeg radnog okruženja:
+Instalirajte sve zavisnosti navedene u konfiguracionom fajlu unutar Vašeg radnog okruženja komandom:  
 pip install -r requirements.txt
 
 ### Korak 3: Pokretanje Jupyter Notebook-a
-Pokrenite Jupyter okruženje, otvorite fajl projekat_notebook.ipynb i izvršite komandu:
+Pokrenite Jupyter okruženje, otvorite fajl Notebook.ipynb i izvršite komandu:
 Kernel → Restart & Run All
-
-*Napomena za ocenjivanje:* Unutar notebook-a implementirana je automatska provera postojanja sirovih simulacionih podataka na putanji data/TNG100-1. Ukoliko ti podaci nisu lokalno dostupni (što je podrazumevano na računaru ispitivača), kod bez prekida i grešaka prebacuje fokus na učitavanje pre-procesiranog uzorka iz fajla data/mw_analogs.csv. Time je omogućena trenutna reprodukcija svih grafikona, statističkih testova i rezultata.
 
 ## Podaci
 
-Uzorak podataka u priloženom CSV fajlu generisan je filtriranjem i obradom javno dostupnog [IllustrisTNG TNG100-1](https://www.tng-project.org/) subhalo kataloga (snapshot=99, crveni pomak z=0). Selekcija je izvršena tako da zadovolji opseg zvezdanih masa Mlečnog puta (10^10.4 - 10^11.0 M☉).
+## Podaci
 
-Fajl data/mw_analogs.csv sadrži sledeće atribute za svaku od 1703 selektovane galaksije:
+Podaci korišćeni u ovom projektu potiču iz javno dostupnog skupa podataka [MALLORN Astronomical Classification Challenge](https://www.kaggle.com/competitions/mallorn-astronomical-classification-challenge), namenjenog fotometrijskoj klasifikaciji astronomskih tranzijenata. Skup sadrži simulirana fotometrijska posmatranja u šest LSST filtera (*u, g, r, i, z, y*), zajedno sa informacijama o tipu posmatranog objekta.
 
-| Kolona | Opis atributa | Jedinica |
-|---|---|---|
-| SubhaloID | Jedinstveni identifikator subhaloa unutar TNG100 simulacije | — |
-| StellarMass | Ukupna zvezdana masa galaksije | M☉ |
-| GasMass | Ukupna masa gasne komponente unutar galaksije | M☉ |
-| SFR | Trenutna brzina formiranja zvezda (Star Formation Rate) | M☉/yr |
-| GasMetallicity | Metaličnost gasne komponente (Z_G) | — |
-| StarMetallicity | Metaličnost zvezdane komponente (Z_*) | — |
+U analizi su korišćena ukupno **3.043 astronomska objekta**, od kojih je **148 klasifikovano kao TDE**, dok preostalih **2.895 objekata** pripada drugim klasama tranzijenata i promenljivih izvora. Cilj projekta je binarna klasifikacija objekata na **TDE** (`target = 1`) i **non-TDE** (`target = 0`).
+
+Podaci su organizovani u dve osnovne vrste CSV fajlova:
+
+### Lightcurve fajlovi
+
+`*_full_lightcurves.csv` fajlovi sadrže pojedinačna fotometrijska merenja svetlosnih krivih. Za svaki objekat postoji više merenja u različitim trenucima i fotometrijskim filterima.
+
+| Kolona       | Opis atributa                                       | Jedinica |
+| ------------ | --------------------------------------------------- | -------- |
+| `object_id`  | Jedinstveni identifikator astronomskog objekta      | —        |
+| `Time (MJD)` | Vreme posmatranja izraženo kao Modified Julian Date | dan      |
+| `Flux`       | Izmereni fluks objekta                              | μJy      |
+| `Flux_err`   | Greška merenja fluksa                               | μJy      |
+| `Filter`     | LSST fotometrijski filter (*u, g, r, i, z, y*)      | —        |
+
+Kompletan skup sadrži približno **479.000 pojedinačnih fotometrijskih merenja**.
+
+### Log fajlovi
+
+`*_log.csv` fajlovi sadrže metapodatke i poznatu klasifikaciju astronomskih objekata.
+
+| Kolona      | Opis atributa                                             |
+| ----------- | --------------------------------------------------------- |
+| `object_id` | Jedinstveni identifikator objekta                         |
+| `Z`         | Crveni pomak (*redshift*) objekta                         |
+| `Z_err`     | Greška crvenog pomaka                                     |
+| `EBV`       | Galaktičko crvenjenje E(B−V)                              |
+| `EBV_err`   | Greška vrednosti E(B−V)                                   |
+| `SpecType`  | Spektroskopski tip objekta (TDE, AGN, SN Ia, SN II, itd.) |
+| `target`    | Ciljna klasa: 1 za TDE, 0 za non-TDE                      |
+| `split`     | Oznaka dela skupa podataka kojem objekat pripada          |
+
+Pre primene modela izvršeno je pretprocesiranje podataka koje uključuje uklanjanje merenja bez vrednosti fluksa, korekciju za galaktičku ekstinkciju i izdvajanje statističkih i vremenskih karakteristika svetlosnih krivih u svakom od šest fotometrijskih filtera.
+
 
 ## Opciono: Preuzimanje sirovih podataka
 
