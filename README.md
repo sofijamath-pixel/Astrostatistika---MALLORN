@@ -37,6 +37,7 @@ Notebook je u potpunosti automatizovan. Prilikom pokretanja nisu potrebne nikakv
 ### Korak 1: Kloniranje repozitorijuma
 -Otvorite Vaš terminal i klonirajte projekat sledećom komandom:  
 git clone https://github.com/sofijamath-pixel/Astrostatistika---MALLORN  
+-Pozicionirajte se u direktorijum:  
 cd Astrostatistika---MALLORN
 
 ### Korak 2: Instalacija potrebnih paketa
